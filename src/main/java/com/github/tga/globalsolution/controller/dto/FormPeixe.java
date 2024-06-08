@@ -43,12 +43,12 @@ public class FormPeixe {
 		this.dataCatag = dataCatag;
 	}
 	
-	public FormPeixe toForm(Peixe funcionario) {
-		this.id = funcionario.getId();
-		this.nome = funcionario.getNome();
-		this.descricao = funcionario.getDescricao();
-		this.peso = funcionario.getPeso();
-		this.dataCatag = funcionario.getDataCatag();
+	public FormPeixe toForm(Peixe peixe) {
+		this.id = peixe.getId();
+		this.nome = peixe.getNome();
+		this.descricao = peixe.getDescricao();
+		this.peso = peixe.getPeso();
+		this.dataCatag = peixe.getDataCatag();
 		return this;
 	}
 	

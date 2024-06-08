@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.tga</groupId>
 	<artifactId>globalsolution</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>globalsolution</name>
 	<description>Global Solution</description>
 	<properties>
@@ -49,6 +49,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

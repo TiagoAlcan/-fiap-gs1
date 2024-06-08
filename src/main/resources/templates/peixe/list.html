@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cargos</title>
+	<title>Peixes</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -14,27 +14,31 @@
 
 <div id="content">
 	<div class="container">
-		<h3>Listagem de Cargos</h3>
+		<h3>Listagem de peixes</h3>
 
-		<a href="cargos/add" class="btn-sm btn-primary"><i class="fas fa-plus"></i></a>
+		<a href="peixes/add" class="btn-sm btn-primary"><i class="fas fa-plus"></i></a>
 
 		<table class="table table-hover table-sm">
 			<thead>
 			<tr>
 				<th>Id</th>
-				<th>Cargo</th>
-				<th>Departamento</th>
-				<th>Ações</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Peso</th>
+				<th>Data Catalogo</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr th:each="cargo : ${cargos}">
-				<td th:text="${cargo.id}"></td>
-				<td th:text="${cargo.nome}"></td>
-				<td th:text="${cargo.departamento != null ?  cargo.departamento.nome : '--' }"></td>
+			<tr th:each="peixe : ${peixes}">
+				<td th:text="${peixe.id}"></td>
+				<td th:text="${peixe.nome}"></td>
+				<td th:text="${peixe.descricao}"></td>
+				<td th:text="${peixe.peso}"></td>
+				<td th:text="${peixe.dataCatag}"></td>
+				
 				<td>
-					<a class="btn-sm btn-primary" th:href="@{/cargos/update/{id}(id=${cargo.id})}"><i class="fas fa-edit"></i></a>
-					<a class="btn-sm btn-danger" th:href="@{/cargos/delete/{id}(id=${cargo.id})}"><i class="fas fa-minus"></i></a>
+					<a class="btn-sm btn-primary" th:href="@{/peixes/update/{id}(id=${peixe.id})}"><i class="fas fa-edit"></i></a>
+					<a class="btn-sm btn-danger" th:href="@{/peixes/delete/{id}(id=${peixe.id})}"><i class="fas fa-minus"></i></a>
 				</td>
 			</tr>
 			</tbody>

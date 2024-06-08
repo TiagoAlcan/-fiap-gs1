@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Funcionarios</title>
+	<title>peixes</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -15,9 +15,9 @@
 <div id="content">
 
 	<div class="container">
-		<h3>Cadastro de Funcionarios</h3>
+		<h3>Cadastro de Peixes</h3>
 
-		<form th:action="@{/funcionarios/save}" th:object="${funcionario}" method="post">
+		<form th:action="@{/peixes/save}" th:object="${peixe}" method="post">
 			<div class="input-group mb-3">
 
 				<div class="input-group-prepend">
@@ -32,93 +32,30 @@
 				</div>
 				<input type="text" class="form-control" id="nome" th:field="*{nome}">
 			</div>
-
-
+			
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-					<div class="input-group-text">Data de Entrada</div>
+					<div class="input-group-text">Descrição</div>
 				</div>
-				<input type="text" class="form-control" id="dataEntrada" th:field="*{dataEntrada}">
+				<input type="text" class="form-control" id="descricao" th:field="*{descricao}">
+			</div>
+			
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<div class="input-group-text">Peso Máximo</div>
+				</div>
+				<input type="text" class="form-control" id="peso" th:field="*{peso}">
 			</div>
 
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-					<div class="input-group-text">Data de Saída</div>
+					<div class="input-group-text">Data de Catalogação</div>
 				</div>
-				<input type="text" class="form-control" id="dataSaida" th:field="*{dataSaida}">
+				<input type="text" class="form-control" id="dataCatag" th:field="*{dataCatag}">
 			</div>
-
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<div class="input-group-text">Salário</div>
-				</div>
-				<input type="text" class="form-control" id="salario" th:field="*{salario}">
 			</div>
-
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<div class="input-group-text">Cargo</div>
-				</div>
-				<select class="form-control" id="id_cargo" th:field="*{idCargo}">
-					<option value="">--Selecione--</option>
-					<option th:each="lov : ${lovCargos}"
-							th:value="${lov.value}"
-							th:text="${lov.text}">
-					</option>
-				</select>
-			</div>
-
-			<!--
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">CEP</div>
-                            </div>
-                            <input type="text" class="form-control" id="cep">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Logradouro</div>
-                            </div>
-                            <input type="text" class="form-control" id="logradouro">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Número</div>
-                            </div>
-                            <input type="text" class="form-control" id="numero">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Complemento</div>
-                            </div>
-                            <input type="text" class="form-control" id="complemento">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Bairro</div>
-                            </div>
-                            <input type="text" class="form-control" id="bairro">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Cidade</div>
-                            </div>
-                            <input type="text" class="form-control" id="cidade">
-                        </div>
-
-                        <label for="uf">UF</label>
-                        <select class="form-control" id="uf">
-                            <option value="SP">São Paulo</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                        </select>
-             -->
-			<button type="submit" class="btn btn-primary btn-sm">Confirmar</button>
-			<a th:href="@{/funcionarios}" class="btn btn-secondary btn-sm">Cancelar</a>
+				<button type="submit" class="btn btn-primary btn-sm">Confirmar</button>
+			<a th:href="@{/peixes}" class="btn btn-secondary btn-sm">Cancelar</a>
 		</form>
 
 	</div>

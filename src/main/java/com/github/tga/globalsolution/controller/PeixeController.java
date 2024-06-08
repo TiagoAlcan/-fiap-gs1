@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.github.tga.globalsolution.controller.dto.FormPeixe;
-import com.github.tga.globalsolution.lov.ListOfValueBuilder;
 import com.github.tga.globalsolution.model.Peixe;
 import com.github.tga.globalsolution.repository.PeixeRepository;
 
@@ -24,7 +23,6 @@ public class PeixeController {
 	@Autowired
 	private PeixeRepository peixeRepository;
 	
-	private ListOfValueBuilder listOfValueBuilder;
 	
 	@GetMapping()
 	public String list(Model model) {

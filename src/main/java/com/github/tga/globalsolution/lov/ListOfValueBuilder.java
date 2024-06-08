@@ -15,7 +15,7 @@ public class ListOfValueBuilder {
 	private PeixeRepository peixeRepository;
 	
 	
-	public List<ListOfValue> getLovDepartamentos() {			
+	public List<ListOfValue> getLovPeixes() {			
 		return peixeRepository
 				.findAll(Sort.by(Sort.Direction.ASC, "nome"))
 				.stream()
