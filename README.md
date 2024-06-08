@@ -14,7 +14,7 @@ Aplicação Java com container para exemplo
 #### Clone
 
 ```
-https://github.com/TiagoAlcan/fiap-gs1.git
+git clone https://github.com/TiagoAlcan/fiap-gs1.git
 ```
 
 
